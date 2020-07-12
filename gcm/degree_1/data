@@ -1,0 +1,105 @@
+# ====================
+# | Model parameters |
+# ====================
+#
+# Continuous equation parameters
+ &PARM01
+# viscosity
+ viscAr=1.0E-4,
+ viscAh=1.0E4,
+ 
+# viscA4=2.0E13,
+# viscC4Leith=2.5,
+# viscC4Leithd=2.5,
+# viscA4GridMax=0.8,
+# useAreaViscLength=.TRUE.,
+
+# diffusivity
+ tempAdvScheme=7,
+# saltAdvScheme=7,
+ diffKrT=1.0E-7,
+ diffKhT=1.0E3,
+ saltStepping=.FALSE.,
+ staggerTimeStep=.TRUE.,
+
+# multiDimAdvection=.TRUE.,
+# vectorInvariantMomentum=.TRUE.,
+
+# initial vertical profiles of S
+ sRef=29*35.0
+
+# equation of state
+ eosType='LINEAR',
+ tAlpha=2.0E-04,
+ sBeta=0.0E-04,
+# boundary conditions
+ no_slip_sides=.TRUE.,
+ no_slip_bottom=.TRUE.,
+ bottomDragLinear=1.1E-03,
+ sideDragFactor=3.0,
+
+# implicit diffusion and convective adjustment
+ implicitDiffusion=.TRUE.,
+ implicitViscosity=.TRUE.,
+
+# exact volume conservation
+ exactConserv=.TRUE.,
+
+# C-V scheme for Coriolis term
+ useCDscheme=.FALSE.,
+
+# file IO stuff
+ readBinaryPrec=64,
+ globalFiles=.TRUE.,
+ useSingleCpuIO=.TRUE.,
+
+ &
+
+# Elliptic solver parameters
+ &PARM02
+ cg2dMaxIters=500,
+ cg2dTargetResidual=1.0E-9,
+ &
+
+# Time stepping parameters
+ &PARM03
+ nIter0=0,
+ nTimeSteps=2592000,
+ deltaT=3600.0,
+ abEps=0.1,
+
+ momDissip_In_AB=.FALSE.,
+ pChkptFreq=31104000,
+ chkptFreq=0.0,
+ dumpFreq=31104000.0,
+
+ monitorFreq=86400.0,
+  
+ tauThetaClimRelax=3456000.0, 
+ 
+#periodicExternalForcing=.TRUE.,
+#externForcingPeriod=31104000.,
+#externForcingCycle=31104000.,
+ &
+
+# Gridding parameters
+ &PARM04
+ usingSphericalPolarGrid=.TRUE.,
+ delR=10.,10.,10.,20.,25.,25.,25.,25.,50.,50.,50.,100.,100.,100.,100.,100.,100.,
+      100.,100.,100.,100.,100.,100.,250.,250.,500.,500.,500.,500.,
+     
+ ygOrigin=0.,
+ xgOrigin=0.,
+ dySpacing=1.,
+ dxSpacing=1.,
+ &
+
+# Input datasets
+ &PARM05
+ bathyFile='depth_ex1.bin',
+ hydrogThetaFile='temp_ex1.bin',
+# hydrogSaltFile='salt_ex1.bin',
+ zonalWindFile='taux_real_ex1.bin',
+ thetaClimFile='surtemp_ex1.bin',
+# saltClimFile='sursalt_ex1.bin',
+ &
