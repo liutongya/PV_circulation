@@ -1,0 +1,50 @@
+# *********************
+# External Forcing Data
+# *********************
+ &EXF_NML_01
+ repeatPeriod= 31104000,
+#readStressOnAgrid = .TRUE.,
+ useAtmWInd = .FALSE.,
+#exf_yftype        = 'RL',
+ exf_iprec         = 64,
+ useExfCheckRange  =.false.,
+#useEXFYearlyFields= .TRUE.,
+#exf_debugLev      = 4,
+ &
+
+# *********************
+ &EXF_NML_02
+#
+#
+ ustressstartdate1 = 00010101,
+ ustressstartdate2 = 000000,
+ ustressperiod     = 7776000.0,
+#
+#vstressstartdate1 = 00010101,
+#vstressstartdate2 = 000000,
+#vstressperiod     = 311040000.0,
+
+#
+ climsststartdate1 = 00010101,
+ climsststartdate2 = 000000,
+ climsstperiod     = 31104000.0,
+ climsstTauRelax   = 4320000.0,
+#
+#
+ ustressfile  = 'taux_real_ex2.bin',
+# vstressfile  = 'tauy_ex2.bin',
+ climsstfile  = 'surtemp_ex2.bin',
+# climsssfile  = 'sursalt_ex2.bin',
+ &
+
+# *********************
+ &EXF_NML_03
+ &
+
+# *********************
+ &EXF_NML_04
+ &
+ 
+ &EXF_NML_OBCS
+
+ &

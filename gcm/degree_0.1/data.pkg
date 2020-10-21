@@ -1,0 +1,12 @@
+# Packages
+ &PACKAGES
+#useMY82=.TRUE.,
+# useRBCS=.TRUE.,
+#useGMREDI=.TRUE.,
+ useKPP=.TRUE.,
+#useEXF=.TRUE.,
+#useCal=.TRUE.,
+#usePtracers=.TURE.,
+ useDiagnostics=.TRUE.,
+#useMNC=.TRUE.,
+ &
