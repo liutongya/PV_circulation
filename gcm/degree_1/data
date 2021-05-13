@@ -18,7 +18,7 @@
  tempAdvScheme=7,
 # saltAdvScheme=7,
  diffKrT=1.0E-7,
- diffKhT=1.0E3,
+ diffKhT=5.0E2,
  saltStepping=.FALSE.,
  staggerTimeStep=.TRUE.,
 
